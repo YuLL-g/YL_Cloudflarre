@@ -1,0 +1,16 @@
+{
+  "endpoint": "wss://relay.example.com/ws",
+  "corp_proxy": "http://proxy.example.net:80",
+  "username": "codex",
+  "password": "REPLACE_WITH_NEW_PASSWORD",
+  "listen_host": "127.0.0.1",
+  "listen_port": 7890,
+  "connect_timeout": 20,
+  "write_timeout": 30,
+  "ping_interval": 20,
+  "pong_timeout": 60,
+  "max_connections": 64,
+  "allowed_ports": [443],
+  "allowed_hosts": [],
+  "ca_file": null
+}

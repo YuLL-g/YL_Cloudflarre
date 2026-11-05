@@ -1,0 +1,40 @@
+{
+  "services": [
+    {
+      "name": "transcodex-ws",
+      "addr": "127.0.0.1:8080",
+      "handler": {
+        "type": "auto",
+        "chain": "clash",
+        "auth": {
+          "username": "codex",
+          "password": "REPLACE_WITH_NEW_PASSWORD"
+        }
+      },
+      "listener": {
+        "type": "ws",
+        "metadata": {
+          "path": "/ws"
+        }
+      }
+    }
+  ],
+  "chains": [
+    {
+      "name": "clash",
+      "hops": [
+        {
+          "name": "local-clash",
+          "nodes": [
+            {
+              "name": "clash-http",
+              "addr": "127.0.0.1:7897",
+              "connector": { "type": "http" },
+              "dialer": { "type": "tcp" }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
